@@ -1,14 +1,14 @@
 {
-	"id": "{712C3C12-0B44-A5AC-BDC4-8049974B1CB3}",
-	"name": "MyZwave_melder",
+	"id": "{E41B0744-9AB6-4A79-863A-7DB080CB1F19}",
+	"name": "HTMLVisuTestDuckCounters",
 	"type": 3,
-	"vendor": "Zwave",
-	"aliases":
+	"vendor": "",
+	"aliases": 
 	[
+		"HTML Visu Test (Duck Counters)"
 	],
-	"parentRequirements": ["{043EA491-0325-4ADD-8FC2-A30C8EEB4D3F}"],
+	"parentRequirements": [],
 	"childRequirements": [],
-	"implemented": ["{7F7632D9-FA40-4F38-8DEA-C83CD4325A32}"],
-	"prefix": "ZWM",
-    "url": "https://github.com/kleieg/IPS_Z-Wave"
+	"implemented": [],
+	"prefix": "HVT"
 }
