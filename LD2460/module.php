@@ -1,6 +1,6 @@
 <?php
 
-    class HTMLVisuTestDuckCounters extends IPSModule
+    class LD2460 extends IPSModule
     {
         
         public function Create() {
