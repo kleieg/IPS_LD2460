@@ -1,8 +1,8 @@
 {
-    "id": "{712C3C12-0B44-A5AC-BDC4-8049974B1CB3}",
-    "name": "Z-Wave",
+    "id": "{8BA1CA3A-EAB0-FE7B-0F92-329848D65579}",
+    "name": "LD2460",
     "author": "Egbert Kleinhans",
-    "url": "https://github.com/kleieg/IPS_Z-Wave",
+    "url": "https://github.com/kleieg/IPS_LD2460",
     "compatibility": {
         "version": "7.0"
     },
