@@ -1,20 +1,51 @@
-
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <title>Quadrat mit Koordinaten</title>
-  <style>
+<style>
     canvas {
       border: 1px solid #000;
     }
-  </style>
-</head>
-<body>
+</style>
 
-<canvas id="myCanvas" width="400" height="300"></canvas>
+<canvas id="myCanvas" width="700" height="600"></canvas>
 
 <script>
+    /* Hier werden die Daten vom Modul verarbeitet. In unserem Falle verschicken wir ein Objekt mit Informationen, wie bestimmte Elemente angepasst werden sollen
+       Prinzipiell kann das Nachrichtenformat aber beliebig angepasst werden und kann an den Bedarf des Moduls angepasst werden */
+    function handleMessage(data) {
+        const decodedData = JSON.parse(data);
+        for (const parameter in decodedData) {
+            // Die Anpassungen betreffen immer das Element mit der ID des Parameters, daher fragen wir das Element erst einmal ab
+            const element = document.getElementById(parameter);
+            // Abhängig vom Parameter werden allerdings verschiedene Werte angepasst
+            switch (parameter) {
+                // Beim äußeren Container kann die Farbe angepasst werden. Daher ist der Wert die RGB-Farbe, welche wir im Container als Stil setzen
+                case 'container': {
+                    // Zahl in Hex-String überführen
+                    let value = decodedData[parameter].toString(16);
+                    // Auf 6 Zeichen auffüllen, damit es eine gültige Farbdarstellung wird
+                    value = value.padStart(6, '0');
+                    element.style.backgroundColor = '#' + value;
+                    break;
+                }
+
+                // Bei den Divs für die einzelnen Zähler wird die Sichtbarkeit gesetzt (true = sichtbar, false = nicht sichtbar)
+                case 'counter1':
+                case 'counter2':
+                case 'counter3':
+                    element.className = decodedData[parameter] ? '' : 'hidden';
+                    break;
+
+                case 'image':
+                    // Auch das Bild wird versteckt, falls es keine Bilddaten gibt
+                    element.className = decodedData[parameter] ? '' : 'hidden';
+                    element.src = decodedData[parameter];
+                    break;
+
+                default:
+                    element.innerText = decodedData[parameter];
+                    break;
+            }
+        }
+    }
+  
   const canvas  = document.getElementById('myCanvas');
   const ctx     = canvas.getContext('2d');
 
@@ -42,6 +73,4 @@
   ctx.fillText(`(${px}, ${py})`, px + 5, py - 5); // [web:1]
 </script>
 
-</body>
-</html>
 
