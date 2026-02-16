@@ -77,3 +77,50 @@
         <button onClick="requestAction('Counter3', +1);">Add</button>
     </div>
 </div>
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Quadrat mit Koordinaten</title>
+  <style>
+    canvas {
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="myCanvas" width="400" height="300"></canvas>
+
+<script>
+  const canvas  = document.getElementById('myCanvas');
+  const ctx     = canvas.getContext('2d');
+
+  // Beispielkoordinaten
+  const x = 120;   // X-Position
+  const y = 80;    // Y-Position
+  const size = 50; // Kantenlänge des Quadrats
+
+  // Quadrat zeichnen (x,y = linke obere Ecke)
+  ctx.fillStyle = 'lightblue';
+  ctx.fillRect(x, y, size, size); // x, y, breite, höhe [web:5]
+
+  // Punkt an einer Position markieren (z.B. Mittelpunkt des Quadrats)
+  const px = x + size / 2;
+  const py = y + size / 2;
+
+  ctx.fillStyle = 'red';
+  ctx.beginPath();
+  ctx.arc(px, py, 3, 0, Math.PI * 2); // kleiner Kreis als Punkt [web:1]
+  ctx.fill();
+
+  // Koordinaten als Text anzeigen
+  ctx.fillStyle = 'black';
+  ctx.font = '12px Arial';
+  ctx.fillText(`(${px}, ${py})`, px + 5, py - 5); [web:1]
+</script>
+
+</body>
+</html>
+
