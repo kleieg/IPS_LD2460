@@ -51,9 +51,12 @@
 
                         case VM_UPDATE:
                             // Teile der HTML-Darstellung den neuen Wert mit. Damit dieser korrekt formatiert ist, holen wir uns den von der Variablen via GetValueFormatted
-                            $this->UpdateVisualizationValue(json_encode([
-                                'value' . ($index + 1) => GetValueFormatted($this->ReadPropertyInteger($counterProperty))
-                            ]));
+                          //  $this->UpdateVisualizationValue(json_encode([
+                          //    'value' . ($index + 1) => GetValueFormatted($this->ReadPropertyInteger($counterProperty))
+                          //  ]));
+
+                            // Schicke eine komplette Update-Nachricht an die Darstellung, da sich ja Parameter geändert haben können
+                            $this->UpdateVisualizationValue($this->GetFullUpdateMessage());
                             break;
                     }
                 }
