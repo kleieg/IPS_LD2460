@@ -39,7 +39,7 @@
         ctx.lineWidth = 2;
         ctx.strokeStyle = '#003366';
         ctx.stroke();
-
+/*
         // Kreis zeichnen
         ctx.beginPath();
         ctx.arc(cx, cy, r3, 0, 2 * Math.PI, false); // voller Kreis 
@@ -48,21 +48,28 @@
         ctx.lineWidth = 2;
         ctx.strokeStyle = '#003366';
         ctx.stroke();
-
+*/
 
 
         for (const parameter in decodedData) {
       
             switch (parameter) {
                 case 'counter1':
-                    const px = cx + r2 * Math.cos(Math.PI / 4); // 45° auf dem Kreis
+                             // Kreis zeichnen
+        ctx.beginPath();
+        ctx.arc(cx, cy, r3, 0, 2 * Math.PI, false); // voller Kreis 
+        ctx.fillStyle = 'lightblue';
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = '#003366';
+        ctx.stroke();
                     break;
                 case 'counter2':
-                    const py = cy + r2 * Math.sin(Math.PI / 4);
+                     
                     break;
             }
         }
-        
+
         const px = cx + r2 * Math.cos(Math.PI / 4); // 45° auf dem Kreis
         const py = cy + r2 * Math.sin(Math.PI / 4);
 
