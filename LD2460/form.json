@@ -3,6 +3,12 @@
 
         {
             "type": "SelectVariable",
+            "name": "Targets",
+            "caption": "Targets",
+            "validVariableTypes": [1,2]
+        },
+        {
+            "type": "SelectVariable",
             "name": "Counter1",
             "caption": "Counter 1",
             "validVariableTypes": [1,2]

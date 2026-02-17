@@ -49,6 +49,7 @@
         ctx.strokeStyle = '#003366';
         ctx.stroke();
 
+        const t = decodedData["valueTargets"];
         const px = decodedData["value1"];
         const py = decodedData["value2"];
 
@@ -61,7 +62,7 @@
         //  Text anzeigen
         ctx.fillStyle = 'black';
         ctx.font = '12px Arial';
-        ctx.fillText(`Targets`, 20, 20);
+        ctx.fillText(`Targets: ${t}`, 20, 20);
 
     
     }
