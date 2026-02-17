@@ -50,12 +50,40 @@
         ctx.stroke();
 
         const t = decodedData["valueTargets"];
-        const px = decodedData["value1"];
-        const py = decodedData["value2"];
+        const px1 = decodedData["x1"];
+        const py1 = decodedData["y1"];
+        const px2 = decodedData["x2"];
+        const py2 = decodedData["y2"];
+        const px3 = decodedData["x3"];
+        const py3 = decodedData["y3"];
+        const px4 = decodedData["x4"];
+        const py4 = decodedData["y4"];
+        const px5 = decodedData["x5"];
+        const py5 = decodedData["y5"];
 
         // Punkt zeichnen (kleiner Kreis)
         ctx.beginPath();
-        ctx.arc(px, py, 4, 0, 2 * Math.PI, false); // kleiner Punkt 
+        ctx.arc(px1, py1, 4, 0, 2 * Math.PI, false); // kleiner Punkt 
+        ctx.fillStyle = 'red';
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(px2, py2, 4, 0, 2 * Math.PI, false); // kleiner Punkt 
+        ctx.fillStyle = 'red';
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(px3, py3, 4, 0, 2 * Math.PI, false); // kleiner Punkt 
+        ctx.fillStyle = 'red';
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(px4, py4, 4, 0, 2 * Math.PI, false); // kleiner Punkt 
+        ctx.fillStyle = 'red';
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(px5, py5, 4, 0, 2 * Math.PI, false); // kleiner Punkt 
         ctx.fillStyle = 'red';
         ctx.fill();
 

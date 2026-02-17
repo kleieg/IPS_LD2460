@@ -9,14 +9,62 @@
         },
         {
             "type": "SelectVariable",
-            "name": "Counter1",
-            "caption": "Counter 1",
+            "name": "x1",
+            "caption": "x 1",
             "validVariableTypes": [1,2]
         },
         {
             "type": "SelectVariable",
-            "name": "Counter2",
-            "caption": "Counter 2",
+            "name": "y1",
+            "caption": "y 1",
+            "validVariableTypes": [1,2]
+        },
+        {
+            "type": "SelectVariable",
+            "name": "x2",
+            "caption": "x x",
+            "validVariableTypes": [1,2]
+        },
+        {
+            "type": "SelectVariable",
+            "name": "y2",
+            "caption": "y 2",
+            "validVariableTypes": [1,2]
+        },        
+        {
+            "type": "SelectVariable",
+            "name": "x3",
+            "caption": "x 3",
+            "validVariableTypes": [1,2]
+        },
+        {
+            "type": "SelectVariable",
+            "name": "y3",
+            "caption": "y 3",
+            "validVariableTypes": [1,2]
+        },
+        {
+            "type": "SelectVariable",
+            "name": "x4",
+            "caption": "x 4",
+            "validVariableTypes": [1,2]
+        },
+        {
+            "type": "SelectVariable",
+            "name": "y4",
+            "caption": "y 4",
+            "validVariableTypes": [1,2]
+        },
+                {
+            "type": "SelectVariable",
+            "name": "x5",
+            "caption": "x 5",
+            "validVariableTypes": [1,2]
+        },
+        {
+            "type": "SelectVariable",
+            "name": "y5",
+            "caption": "y 5",
             "validVariableTypes": [1,2]
         }
     ]
