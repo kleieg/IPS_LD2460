@@ -51,9 +51,9 @@
 
     // Beispiel: Kreis-Mittelpunkt und Radius
     const cx = 350;      // X-Koordinate des Kreismittelpunkts
-    const cy = 295;      // Y-Koordinate des Kreismittelpunkts
-    const r1  = 300;       // Radius
-    const r2  = 200;       // Radius
+    const cy = 300;      // Y-Koordinate des Kreismittelpunkts
+    const r1  = 290;       // Radius
+    const r2  = 195;       // Radius
     const r3  = 100;        // Radius
 
     // Kreis zeichnen 
@@ -84,8 +84,8 @@
     ctx.stroke();
 
     // Beispiel-Punkt (x,y), z.B. auf dem Kreisrand
-    const px = cx + r * Math.cos(Math.PI / 4); // 45° auf dem Kreis
-    const py = cy + r * Math.sin(Math.PI / 4);
+    const px = cx + r2 * Math.cos(Math.PI / 4); // 45° auf dem Kreis
+    const py = cy + r2 * Math.sin(Math.PI / 4);
 
     // Punkt zeichnen (kleiner Kreis)
     ctx.beginPath();
