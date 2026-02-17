@@ -88,6 +88,11 @@
         }
 
         // Generiere eine Nachricht, die alle Elemente in der HTML-Darstellung aktualisiert
+        //
+        //Falls die Variablen noch nicht im LD2460 Device definiert siond führt das zu Fehleren.
+        //Eigenlich müßte man bhier alle Variablen mit IPS_VariableExists($counter1ID) überprüfen
+        //Ausweg: Fehler ignorieren, alle Variablen defoinieren und den Modul nochmal udaten
+        //
         private function GetFullUpdateMessage() {
             $targetsID = $this->ReadPropertyInteger('Targets');
             $x1ID = $this->ReadPropertyInteger('x1');
