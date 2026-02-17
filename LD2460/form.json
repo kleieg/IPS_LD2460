@@ -1,11 +1,6 @@
 {
     "elements": [
-        {
-            "type": "SelectMedia",
-            "name": "Image",
-            "caption": "Image",
-            "validVariableTypes": [1,2]
-        },
+
         {
             "type": "SelectVariable",
             "name": "Counter1",
@@ -17,18 +12,6 @@
             "name": "Counter2",
             "caption": "Counter 2",
             "validVariableTypes": [1,2]
-        },
-        {
-            "type": "SelectVariable",
-            "name": "Counter3",
-            "caption": "Counter 3",
-            "validVariableTypes": [1,2]
-        },
-        {
-            "type": "SelectColor",
-            "name": "Color",
-            "caption": "Background Color",
-            "allowTransparent": false
         }
     ]
 }
