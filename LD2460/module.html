@@ -50,11 +50,21 @@
     const ctx    = canvas.getContext('2d');
 
     // Beispiel: Kreis-Mittelpunkt und Radius
-    const cx = 150;      // X-Koordinate des Kreismittelpunkts
-    const cy = 120;      // Y-Koordinate des Kreismittelpunkts
-    const r  = 60;       // Radius
+    const cx = 300;      // X-Koordinate des Kreismittelpunkts
+    const cy = 250;      // Y-Koordinate des Kreismittelpunkts
+    const r  = 200;       // Radius
 
     // Kreis zeichnen
+    ctx.beginPath();
+    ctx.arc(cx, cy, r, 0, 2 * Math.PI, false); // voller Kreis 
+    ctx.fillStyle = 'lightblue';
+    ctx.fill();
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = '#003366';
+    ctx.stroke();
+
+      // Kreis zeichnen
+    r  = 100;       // Radius
     ctx.beginPath();
     ctx.arc(cx, cy, r, 0, 2 * Math.PI, false); // voller Kreis 
     ctx.fillStyle = 'lightblue';
