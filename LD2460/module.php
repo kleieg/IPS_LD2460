@@ -36,7 +36,7 @@
                 }
             }
 
-            foreach(['Counter1', 'Counter2'] as $counterProperty) {
+            foreach(['x1', 'y1', 'x2', 'y2', 'x3', 'y3', 'x4', 'y4', 'x5', 'y5'] as $counterProperty) {
                 $this->RegisterMessage($this->ReadPropertyInteger($counterProperty), OM_CHANGENAME);
                 $this->RegisterMessage($this->ReadPropertyInteger($counterProperty), VM_UPDATE);
             }
@@ -48,7 +48,7 @@
         public function MessageSink($TimeStamp, $SenderID, $Message, $Data) {
             // Man könnte noch auf weitere Nachrichten reagieren, um das ganze "vollständig" zu machen
             // Werden registrierte Objekte gelöscht? Aktualisiert sich das Bild? Da dies aber nur ein Beispiel ist, lasse ich diese Nachrichten weg
-            foreach(['Counter1', 'Counter2'] as $index => $counterProperty) {
+            foreach(['x1', 'y1', 'x2', 'y2', 'x3', 'y3', 'x4', 'y4', 'x5', 'y5'] as $index => $counterProperty) {
                 if ($SenderID === $this->ReadPropertyInteger($counterProperty)) {
                     switch ($Message) {
                         case OM_CHANGENAME:
