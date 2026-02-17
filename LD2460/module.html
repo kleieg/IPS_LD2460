@@ -46,31 +46,37 @@
         }
     }
   
-  const canvas  = document.getElementById('myCanvas');
-  const ctx     = canvas.getContext('2d');
+    const canvas = document.getElementById('myCanvas');   
+    const ctx    = canvas.getContext('2d');
 
-  // Beispielkoordinaten
-  const x = 120;   // X-Position
-  const y = 80;    // Y-Position
-  const size = 50; // Kantenlänge des Quadrats
+    // Beispiel: Kreis-Mittelpunkt und Radius
+    const cx = 150;      // X-Koordinate des Kreismittelpunkts
+    const cy = 120;      // Y-Koordinate des Kreismittelpunkts
+    const r  = 60;       // Radius
 
-  // Quadrat zeichnen (x,y = linke obere Ecke)
-  ctx.fillStyle = 'lightblue';
-  ctx.fillRect(x, y, size, size); // x, y, breite, höhe [web:5]
+    // Kreis zeichnen
+    ctx.beginPath();
+    ctx.arc(cx, cy, r, 0, 2 * Math.PI, false); // voller Kreis 
+    ctx.fillStyle = 'lightblue';
+    ctx.fill();
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = '#003366';
+    ctx.stroke();
 
-  // Punkt an einer Position markieren (z.B. Mittelpunkt des Quadrats)
-  const px = x + size / 2;
-  const py = y + size / 2;
+    // Beispiel-Punkt (x,y), z.B. auf dem Kreisrand
+    const px = cx + r * Math.cos(Math.PI / 4); // 45° auf dem Kreis
+    const py = cy + r * Math.sin(Math.PI / 4);
 
-  ctx.fillStyle = 'red';
-  ctx.beginPath();
-  ctx.arc(px, py, 3, 0, Math.PI * 2); // kleiner Kreis als Punkt [web:1]
-  ctx.fill();
+    // Punkt zeichnen (kleiner Kreis)
+    ctx.beginPath();
+    ctx.arc(px, py, 4, 0, 2 * Math.PI, false); // kleiner Punkt 
+    ctx.fillStyle = 'red';
+    ctx.fill();
 
-  // Koordinaten als Text anzeigen
-  ctx.fillStyle = 'black';
-  ctx.font = '12px Arial';
-  ctx.fillText(`(${px}, ${py})`, px + 5, py - 5); // [web:1]
+    // Koordinaten als Text daneben
+    ctx.fillStyle = 'black';
+    ctx.font = '12px Arial';
+    ctx.fillText(`(${px.toFixed(0)}, ${py.toFixed(0)})`, px + 6, py - 6); 
 </script>
 
 
