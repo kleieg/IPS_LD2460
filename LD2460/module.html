@@ -50,21 +50,9 @@
         ctx.stroke();
 
 
-
-        for (const parameter in decodedData) {
-      
-            switch (parameter) {
-                case 'counter1':
-
-                    break;
-                case 'counter2':
-                     
-                    break;
-            }
-        }
-
         const px = decodedData["value1"];
         const py = decodedData["value2"];
+
        // const px = cx + r2 * Math.cos(Math.PI / 4); // 45° auf dem Kreis
        // const py = cy + r2 * Math.sin(Math.PI / 4);
 
@@ -77,7 +65,7 @@
         // Koordinaten als Text daneben
         ctx.fillStyle = 'black';
         ctx.font = '12px Arial';
-        ctx.fillText(`(${px.toFixed(0)}, ${py.toFixed(0)})`, px + 6, py - 6); 
+        ctx.fillText(`(${px}, ${py})`, px + 6, py - 6); 
     
     }
 
