@@ -15,6 +15,9 @@
         const canvas = document.getElementById('myCanvas');   
         const ctx    = canvas.getContext('2d');
 
+        // komplettes Canvas löschen
+        ctx.clearRect(0, 0, canvas.width, canvas.height); 
+
         // Beispiel: Kreis-Mittelpunkt und Radius
         const cx = 350;      // X-Koordinate des Kreismittelpunkts
         const cy = 300;      // Y-Koordinate des Kreismittelpunkts
