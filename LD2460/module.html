@@ -49,12 +49,8 @@
         ctx.strokeStyle = '#003366';
         ctx.stroke();
 
-
         const px = decodedData["value1"];
         const py = decodedData["value2"];
-
-       // const px = cx + r2 * Math.cos(Math.PI / 4); // 45° auf dem Kreis
-       // const py = cy + r2 * Math.sin(Math.PI / 4);
 
         // Punkt zeichnen (kleiner Kreis)
         ctx.beginPath();
@@ -62,10 +58,6 @@
         ctx.fillStyle = 'red';
         ctx.fill();
 
-        // Koordinaten als Text daneben
-        ctx.fillStyle = 'black';
-        ctx.font = '12px Arial';
-        ctx.fillText(`(${px}, ${py})`, px + 6, py - 6); 
     
     }
 
