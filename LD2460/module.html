@@ -10,22 +10,7 @@
     /* Hier werden die Daten vom Modul verarbeitet. In unserem Falle verschicken wir ein Objekt mit Informationen, wie bestimmte Elemente angepasst werden sollen
        Prinzipiell kann das Nachrichtenformat aber beliebig angepasst werden und kann an den Bedarf des Moduls angepasst werden */
     function handleMessage(data) {
-        const decodedData = JSON.parse(data);
-        for (const parameter in decodedData) {
-            // Die Anpassungen betreffen immer das Element mit der ID des Parameters, daher fragen wir das Element erst einmal ab
-            const element = document.getElementById(parameter);
-            // Abhängig vom Parameter werden allerdings verschiedene Werte angepasst
-            switch (parameter) {
-                case 'counter1':
-                    break;
-                case 'counter2':
-                    break;
-
-                default:
-                    break;
-            }
-        }
-    
+        const decodedData = JSON.parse(data);    
   
         const canvas = document.getElementById('myCanvas');   
         const ctx    = canvas.getContext('2d');
@@ -64,9 +49,22 @@
         ctx.strokeStyle = '#003366';
         ctx.stroke();
 
-        // Beispiel-Punkt (x,y), z.B. auf dem Kreisrand
-        const px = cx + r2 * Math.cos(Math.PI / 4); // 45° auf dem Kreis
-        const py = cy + r2 * Math.sin(Math.PI / 4);
+
+
+        for (const parameter in decodedData) {
+      
+            switch (parameter) {
+                case 'value1':
+                    const px = cx + r2 * Math.cos(Math.PI / 4); // 45° auf dem Kreis
+                    break;
+                case 'value2':
+                    const py = cy + r2 * Math.sin(Math.PI / 4);
+                    break;
+
+                default:
+                    break;
+            }
+        }
 
         // Punkt zeichnen (kleiner Kreis)
         ctx.beginPath();
