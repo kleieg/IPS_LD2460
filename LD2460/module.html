@@ -61,31 +61,42 @@
         const px5 = decodedData["x5"];
         const py5 = decodedData["y5"];
 
-        // Punkt zeichnen (kleiner Kreis)
-        ctx.beginPath();
-        ctx.arc(px1, py1, 4, 0, 2 * Math.PI, false); // kleiner Punkt 
-        ctx.fillStyle = 'red';
-        ctx.fill();
+        // Punkte zeichnen (kleiner Kreis)
+        switch (t) {
+            case 5:
+                ctx.beginPath();
+                ctx.arc(px5, py5, 4, 0, 2 * Math.PI, false); // kleiner Punkt 
+                ctx.fillStyle = 'red';
+                ctx.fill();
+                
+            case 4:
+                ctx.beginPath();
+                ctx.arc(px4, py4, 4, 0, 2 * Math.PI, false); // kleiner Punkt 
+                ctx.fillStyle = 'red';
+                ctx.fill();
+                
+            case 3:
+                ctx.beginPath();
+                ctx.arc(px3, py3, 4, 0, 2 * Math.PI, false); // kleiner Punkt 
+                ctx.fillStyle = 'red';
+                ctx.fill();
+                
+            case 2:
+                ctx.beginPath();
+                ctx.arc(px2, py2, 4, 0, 2 * Math.PI, false); // kleiner Punkt 
+                ctx.fillStyle = 'red';
+                ctx.fill();
+                
+            case 1:
+                ctx.beginPath();
+                ctx.arc(px1, py1, 4, 0, 2 * Math.PI, false); // kleiner Punkt 
+                ctx.fillStyle = 'red';
+                ctx.fill();
+        }
 
-        ctx.beginPath();
-        ctx.arc(px2, py2, 4, 0, 2 * Math.PI, false); // kleiner Punkt 
-        ctx.fillStyle = 'red';
-        ctx.fill();
 
-        ctx.beginPath();
-        ctx.arc(px3, py3, 4, 0, 2 * Math.PI, false); // kleiner Punkt 
-        ctx.fillStyle = 'red';
-        ctx.fill();
 
-        ctx.beginPath();
-        ctx.arc(px4, py4, 4, 0, 2 * Math.PI, false); // kleiner Punkt 
-        ctx.fillStyle = 'red';
-        ctx.fill();
 
-        ctx.beginPath();
-        ctx.arc(px5, py5, 4, 0, 2 * Math.PI, false); // kleiner Punkt 
-        ctx.fillStyle = 'red';
-        ctx.fill();
 
         //  Text anzeigen
         ctx.fillStyle = 'black';
