@@ -63,15 +63,6 @@
             }
         }
 
-        public function RequestAction($Ident, $Value) {
-            // Nachrichten von der HTML-Darstellung schicken immer den Ident passend zur Eigenschaft und im Wert die Differenz, welche auf die Variable gerechnet werden soll
-            $variableID = $this->ReadPropertyInteger($Ident);
-            if (!IPS_VariableExists($variableID)) {
-                $this->SendDebug('Error in RequestAction', 'Variable to be updated does not exist', 0);
-                return;
-            }
-            SetValue($variableID, GetValue($variableID) + $Value);
-        }
         
         public function GetVisualizationTile() {
             // Füge ein Skript hinzu, um beim laden, analog zu Änderungen bei Laufzeit, die Werte zu setzen
