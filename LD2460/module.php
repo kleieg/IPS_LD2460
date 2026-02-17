@@ -90,28 +90,28 @@
         // Generiere eine Nachricht, die alle Elemente in der HTML-Darstellung aktualisiert
         private function GetFullUpdateMessage() {
             $targetsID = $this->ReadPropertyInteger('Targets');
-            $counter1ID = $this->ReadPropertyInteger('x1');
-            $counter2ID = $this->ReadPropertyInteger('y1');
-            $counter3ID = $this->ReadPropertyInteger('x2');
-            $counter4ID = $this->ReadPropertyInteger('y2');
-            $counter5ID = $this->ReadPropertyInteger('x3');
-            $counter6ID = $this->ReadPropertyInteger('y3');
-            $counter7ID = $this->ReadPropertyInteger('x4');
-            $counter8ID = $this->ReadPropertyInteger('y4');
-            $counter9ID = $this->ReadPropertyInteger('x5');
-            $counter10ID = $this->ReadPropertyInteger('y5');
+            $x1ID = $this->ReadPropertyInteger('x1');
+            $y1ID = $this->ReadPropertyInteger('y1');
+            $x2ID = $this->ReadPropertyInteger('x2');
+            $y2ID = $this->ReadPropertyInteger('y2');
+            $x3ID = $this->ReadPropertyInteger('x3');
+            $y3ID = $this->ReadPropertyInteger('y3');
+            $x4ID = $this->ReadPropertyInteger('x4');
+            $y4ID = $this->ReadPropertyInteger('y4');
+            $x5ID = $this->ReadPropertyInteger('x5');
+            $y5ID = $this->ReadPropertyInteger('y5');
 
             $result['valueTargets'] = GetValueFormatted($targetsID);
-            $result['x1'] = GetValueFormatted($counter1ID);
-            $result['y1'] = GetValueFormatted($counter2ID);
-            $result['x2'] = GetValueFormatted($counter3ID);
-            $result['y2'] = GetValueFormatted($counter4ID);
-            $result['x3'] = GetValueFormatted($counter5ID);
-            $result['y3'] = GetValueFormatted($counter6ID);
-            $result['x4'] = GetValueFormatted($counter7ID);
-            $result['y4'] = GetValueFormatted($counter8ID);
-            $result['x5'] = GetValueFormatted($counter9ID);
-            $result['y5'] = GetValueFormatted($counter10ID);
+            $result['x1'] = GetValueFormatted($x1ID);
+            $result['y1'] = GetValueFormatted($y1ID);
+            $result['x2'] = GetValueFormatted($x2ID);
+            $result['y2'] = GetValueFormatted($y2ID);
+            $result['x3'] = GetValueFormatted($x3ID);
+            $result['y3'] = GetValueFormatted($y3ID);
+            $result['x4'] = GetValueFormatted($x4ID);
+            $result['y4'] = GetValueFormatted($y4ID);
+            $result['x5'] = GetValueFormatted($x5ID);
+            $result['y5'] = GetValueFormatted($y5ID);
 
             return json_encode($result);
         }
