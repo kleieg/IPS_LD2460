@@ -84,26 +84,10 @@
             $targetsID = $this->ReadPropertyInteger('Targets');
             $counter1ID = $this->ReadPropertyInteger('Counter1');
             $counter2ID = $this->ReadPropertyInteger('Counter2');
-            $targetsExsists = IPS_VariableExists($targetsID);   
-            $counter1Exists = IPS_VariableExists($counter1ID);
-            $counter2Exists = IPS_VariableExists($counter2ID);
-            $result = [
-                'counter1' => $counter1Exists,
-                'counter2' => $counter2Exists,
-                'targets' => $targetsExsists
-            ];
-            if ($counter1Exists) {
-                $result['name1'] = IPS_GetName($counter1ID);
-                $result['value1'] = GetValueFormatted($counter1ID);
-            }
-            if ($targetsExsists) {
-                $result['nameTargets'] = IPS_GetName($targetsID);
-                $result['valueTargets'] = GetValueFormatted($targetsID);
-            }   
-            if ($counter2Exists) {
-                $result['name2'] = IPS_GetName($counter2ID);
-                $result['value2'] = GetValueFormatted($counter2ID);
-            }
+
+            $result['value1'] = GetValueFormatted($counter1ID);
+            $result['valueTargets'] = GetValueFormatted($targetsID);
+            $result['value2'] = GetValueFormatted($counter2ID);
 
             return json_encode($result);
         }
