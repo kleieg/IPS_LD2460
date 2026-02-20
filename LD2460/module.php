@@ -1,5 +1,5 @@
 <?php
-
+// Basiert auf https://github.com/symcon/SymconTest   HTMLVisuTestDuckCounters
     class LD2460 extends IPSModule
     {
         
